@@ -13,11 +13,12 @@ import {
 } from 'react-icons/hi';
 import { Button } from './ui/button';
 import { IProduct } from '@/types/globalTypes';
+import { useAppSelector } from '@/redux/hook';
 
 export default function Cart() {
   //! Dummy data
-
-  const products: IProduct[] = [];
+  const { products } = useAppSelector((state) => state.cart);
+  // const products: IProduct[] = [];
   const total = 0;
 
   //! **
@@ -43,6 +44,7 @@ export default function Cart() {
               <div className="border-r pr-5 shrink-0">
                 <img src={product?.image} alt="" className="h-full" />
               </div>
+
               <div className="px-2 w-full flex flex-col gap-3">
                 <h1 className="text-2xl self-center">{product?.name}</h1>
                 <p>Quantity: {product.quantity}</p>
@@ -51,6 +53,7 @@ export default function Cart() {
                   $
                 </p>
               </div>
+
               <div className="border-l pl-5 flex flex-col justify-between">
                 <Button>
                   <HiOutlinePlus size="20" />
