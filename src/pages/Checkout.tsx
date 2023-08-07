@@ -5,6 +5,7 @@ import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Switch } from '@/components/ui/switch';
 import { Textarea } from '@/components/ui/textarea';
+import { useAppSelector } from '@/redux/hook';
 import { IProduct } from '@/types/globalTypes';
 
 import { useState } from 'react';
@@ -12,10 +13,9 @@ import { useState } from 'react';
 export default function Checkout() {
   const [scheduled, setScheduled] = useState<boolean>(false);
 
+  const { products } = useAppSelector((state) => state.cart);
   //! Dummy Data
-
-  const products: IProduct[] = [];
-
+  // const products: IProduct[] = [];
   //! **
 
   return (
