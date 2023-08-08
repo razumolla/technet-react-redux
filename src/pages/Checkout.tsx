@@ -95,6 +95,7 @@ export default function Checkout() {
           </div>
         </div>
       </div>
+
       <div className="max-w-lg w-full">
         <h1 className="mb-2">Order Summery</h1>
         <div className="border border-gray-300 rounded-md h-[60vh] p-10 flex flex-col">
@@ -118,6 +119,7 @@ export default function Checkout() {
               </div>
             ))}
           </div>
+
           <div className="space-y-2">
             <div className="flex justify-between text-lg">
               <p>Subtotal</p>
